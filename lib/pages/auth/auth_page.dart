@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:multistore_app/pages/auth/widgets/sign_in_widget.dart';
-import 'package:multistore_app/pages/auth/widgets/sign_up_widget.dart';
 
 import '../../utils/color_resources.dart';
 import '../../utils/custom_themes.dart';
 import '../../utils/dimensions.dart';
 import '../../utils/images.dart';
+import 'widgets/sign_in_widget.dart';
+import 'widgets/sign_up_widget.dart';
 
 class AuthPage extends StatefulWidget {
   final int initialPage;
@@ -107,6 +107,7 @@ class _AuthPageState extends State<AuthPage> {
                     itemCount: 2,
                     controller: pageController,
                     itemBuilder: (context, index) {
+                      // return const SignInWidget();
                       if (isLoginPage) {
                         return const SignInWidget();
                       } else {
